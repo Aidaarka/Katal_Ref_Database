@@ -31,5 +31,40 @@ namespace Katal_Ref.Properties
             this.установкаBindingSource.EndEdit();
             this.установкаTableAdapter.Update(this.katal_Reform_DBDataSet1.Установка);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            установкаBindingSource.Filter = "Наименование_установки LIKE'%" + textBox8.Text + "%'";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            установкаBindingSource.Filter = "Год_открытия_устанвки = " + Convert.ToInt32(textBox9.Text);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            установкаBindingSource.Filter = "Местоположение LIKE'%" + textBox10.Text + "%'";
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            установкаBindingSource.Filter = "Производительность = " + Convert.ToDouble(textBox11.Text);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            установкаBindingSource.Filter = "Давление = " + Convert.ToDouble(textBox12.Text);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            установкаBindingSource.Filter = "Температура_кипения = " + Convert.ToInt32(textBox13.Text);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        { 
+            установкаBindingSource.Filter = null;
+        }
     }
 }
